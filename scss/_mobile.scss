@@ -1,0 +1,99 @@
+.mobile {
+    // display: none;
+    background-color: #f66a67;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 21;
+    width: 320px;
+    height: 100vh;
+    font-size: 20px;
+    font-weight: 600;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    //animation: mymove .3s linear;
+    transition: 0.5s;
+    &-list {
+        margin-top: 100px;
+    }
+    &-item {
+        margin-bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+    &-link {
+        width: 100%;
+    }
+    &-phone {
+        color: white;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        width: 100%;
+    }
+    li {
+        list-style: none;
+    }
+    
+    
+}
+.layer {
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index:10;
+    visibility: hidden;
+    transition: 0.4s;
+}
+.addLayer {
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: visible;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle {
+    //display: block;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    
+} 
+.icon-toggle {
+    cursor: pointer;
+}
+
+// @keyframes mymove {
+//     from {
+//         right: -320px;
+//         opacity: 0;
+//     }
+//     to {
+//         right: 0px;
+//         opacity: 1;
+//     }
+//   }
+// @keyframes mymove1 {
+//     from {
+//         right: 0px;
+//         opacity: 0;
+//     }
+//     to {
+//         right: -320px;
+//         opacity: 1;
+//     }
+//   }
+

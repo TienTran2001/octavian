@@ -1,0 +1,102 @@
+.team {
+    
+    background-color: #f7f8f9;
+    padding: 150px 0;
+    &-main {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-content {
+        max-width: 370px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+    &-heading {
+        font-size: 36px;
+        line-height: 1.5;
+        font-weight: 800;
+        font-family: $secondary-font;
+        color: $gray;
+        margin-bottom: 30px;
+    }
+    &-decs {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 60px;
+    }
+    &-images {
+      display: flex;
+      align-items: center;
+      gap: 0 30px;
+    }
+    &-image {
+        transition: 0.5s;
+        &:hover {
+            transform: translateY(-15px);
+        }
+    }
+    &-img2 {
+        margin-left: auto;
+        margin-top: 30px;
+    }
+}
+
+@media screen and(max-width: 1023px) {
+    .team {
+        padding-top: 0px;
+        &-main {
+            display: flex;
+            flex-direction: column;
+            flex-direction: column-reverse;
+        }
+        &-content {
+            
+            margin: 0 auto;
+            margin-top: 50px;
+            max-width: 700px;
+            text-align: center;
+            a {
+                transform: translateX(-50%);
+            }
+        }
+        &-images {
+            margin-top: 50px;
+            gap: 0 100px;
+        }
+        &-img2 {
+            margin-top: 90px;
+        }
+        
+    }
+}
+
+@media screen and(max-width: 767px) {
+    .team {
+         padding: 80px 0;
+        &-images {
+          
+            gap: 0 50px;
+        }
+        &-img2 {
+            margin-top: 40px;
+        }
+    }
+}
+
+.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

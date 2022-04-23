@@ -1,0 +1,132 @@
+.partner {
+    margin-bottom: 150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-main {
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-gap: 40px;
+        
+        .right, .left {
+            position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             font-size: 60px;
+             cursor: pointer;
+        }
+
+        .right {
+            right: 0;          
+        }
+        .left {
+            left: 0;          
+        }
+    }
+    &-item {
+        position: absolute;
+        height: 50px;
+        top: 50%;
+        right: 50%; 
+        transform: translateX(50%);    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s linear;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 1;
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+.active {
+   // display: block;
+   visibility: visible;
+   opacity: 1;
+}
+.toLeft {
+    animation: toLeft 1s forwards;
+}
+.toRight {
+    animation: toRight 1s forwards;
+}
+
+.fromToRight {
+    animation: fromToRight 1s forwards;
+}
+.fromToLeft {
+    animation: fromToLeft 1s forwards;
+}
+
+@keyframes toLeft {
+    0% {
+        transform: translateX(50%);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-150%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes toRight {
+    0% {
+        transform: translateX(50%);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(150%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes fromToRight {
+    0% {
+        transform: translateX(250%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes fromToLeft {
+    0% {
+        transform: translateX(-250%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .partner {
+        margin-bottom: 50px;
+        &-main {
+            grid-template-columns: repeat(2, 1fr);
+            gap:20px 10px;
+        }
+    }
+}
+@media screen and (max-width: 374px) {
+    .partner {
+        &-main {
+            grid-template-columns: 1fr;
+            gap:20px 0;
+        }
+    }
+}
